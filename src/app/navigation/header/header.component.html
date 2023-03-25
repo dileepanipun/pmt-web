@@ -1,0 +1,20 @@
+<header class="main-header">
+    <div class="left-main-menu">
+        <div class="app-logo">
+            <img src="./assets/img/app-logo.png" alt="app-logo-prime-market-terminal" class="app-logo-image">
+        </div>
+        <nav class="left-menu">
+            <li *ngFor="let menuItem of menuItems" [title]="menuItem.title" class="menu-item">
+                <a [routerLink]="menuItem.path">
+                    <fa-icon [icon]="menuItem.icon"></fa-icon>
+                </a>
+            </li>
+        </nav>
+    </div>
+    <div class="middle-content">
+
+    </div>
+    <div class="right-menu-content">
+
+    </div>
+</header>
