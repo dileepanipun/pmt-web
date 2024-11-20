@@ -1,19 +1,41 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LucideAngularModule, File, Home, Menu, UserCheck } from 'lucide-angular';
 
+interface TechIcon {
+  src: string;
+  alt: string;
+}
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LucideAngularModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [
+    RouterOutlet
+  ]
 })
 export class AppComponent {
-  title = 'pmt-web';
-
-  readonly FileIcon = File;
-  readonly HomeIcon = Home;
-  readonly MenuIcon = Menu;
-  readonly UserCheckIcon = UserCheck;
+  techIcons: TechIcon[] = [
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg',
+      alt: 'Angular'
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+      alt: 'TypeScript'
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+      alt: 'SCSS'
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+      alt: 'Node.js'
+    },
+    {
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg',
+      alt: 'GitHub'
+    }
+  ];
 }

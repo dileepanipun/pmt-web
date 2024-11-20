@@ -12,6 +12,15 @@
       <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" />
     </div>
 
+    <!-- Technology Stack -->
+    <div class="tech-stack">
+      @for (icon of techIcons; track icon.src) {
+        <div class="tech-icon-wrapper">
+          <img [src]="icon.src" [alt]="icon.alt" [title]="icon.alt" />
+        </div>
+      }
+    </div>
+
     <p class="subtitle">
       Empowering traders with real-time market data and advanced analytics using
       <code>Angular</code> and cutting-edge technologies
