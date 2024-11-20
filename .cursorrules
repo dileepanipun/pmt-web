@@ -1,5 +1,4 @@
-
-  You are an expert in Angular, SASS, and TypeScript, focusing on scalable web development.
+You are an expert in Angular, SCSS, TypeScript, and modern web development, focusing on scalable and performant applications.
 
 Key Principles
 - Provide clear, precise Angular and TypeScript examples.
@@ -17,7 +16,22 @@ TypeScript & Angular
 - Utilize optional chaining and nullish coalescing.
 - Use standalone components when applicable.
 - Leverage Angular's signals system for efficient state management and reactive programming.
-- Use the `inject` function for injecting services directly within component, directive or service logic, enhancing clarity and reducing boilerplate.
+- Use the `inject` function for injecting services directly within component, directive or service logic.
+
+SCSS Guidelines
+- Use BEM (Block Element Modifier) naming convention for SCSS classes.
+- Leverage SCSS nesting, but limit nesting depth to 3 levels max.
+- Utilize SCSS variables for theming and consistent design tokens.
+- Create a `_variables.scss` file for global design tokens.
+- Use SCSS mixins for reusable style patterns.
+- Separate layout, typography, and component-specific styles.
+- Implement a clear theming system with light/dark mode support.
+
+Lucide Icons Integration
+- Use Lucide icons as SVG components or through Angular's `@angular/common` dynamic imports.
+- Create a shared icons module for centralized icon management.
+- Standardize icon sizing and color through SCSS variables.
+- Prefer programmatic icon rendering over static SVG imports.
 
 File Naming Conventions
 - `*.component.ts` for Components
@@ -26,6 +40,8 @@ File Naming Conventions
 - `*.directive.ts` for Directives
 - `*.pipe.ts` for Pipes
 - `*.spec.ts` for Tests
+- `*.scss` for SCSS files
+- `*.theme.scss` for theme-specific styles
 - All files use kebab-case.
 
 Code Style
@@ -39,46 +55,70 @@ Angular-Specific Guidelines
 - Use async pipe for observables in templates.
 - Implement lazy loading for feature modules.
 - Ensure accessibility with semantic HTML and ARIA labels.
-- Utilize deferrable views for optimizing component rendering, deferring non-critical views until necessary.
-- Incorporate Angular's signals system to enhance reactive programming and state management efficiency.
-- Use the `NgOptimizedImage` directive for efficient image loading, improving performance and preventing broken links.
+- Utilize deferrable views for optimizing component rendering.
+- Incorporate Angular's signals system for reactive programming.
+- Use the `NgOptimizedImage` directive for efficient image loading.
 
 Import Order
 1. Angular core and common modules
 2. RxJS modules
-3. Other Angular modules
-4. Application core imports
-5. Shared module imports
-6. Environment-specific imports
-7. Relative path imports
+3. Lucide icon imports
+4. Other Angular modules
+5. Application core imports
+6. Shared module imports
+7. SCSS theme imports
+8. Environment-specific imports
+9. Relative path imports
 
-Error Handling and Validation
-- Use proper error handling in services and components.
-- Use custom error types or factories.
-<!-- - Implement Angular form validation or custom validators. -->
-
-Testing
-- Follow the Arrange-Act-Assert pattern for tests.
+Theming & Design System
+- Create a centralized theme configuration in `_variables.scss`.
+- Support multiple themes with CSS variables.
+- Use SCSS color functions for dynamic theme generation.
+- Implement responsive design using SCSS mixins.
+- Create a theme service for dynamic theme switching.
 
 Performance Optimization
 - Optimize ngFor with trackBy functions.
 - Use pure pipes for expensive computations.
-- Avoid direct DOM manipulation; use Angular’s templating system.
-- Optimize rendering performance by deferring non-essential views.
-- Use Angular’s signals system to manage state efficiently and reduce unnecessary re-renders.
-- Use the `NgOptimizedImage` directive to enhance image loading and performance.
+- Avoid direct DOM manipulation.
+- Use Angular's signals for efficient state management.
+- Implement code splitting and lazy loading.
+- Optimize Lucide icon rendering and imports.
 
 Security
-- Prevent XSS with Angular’s sanitization; avoid using innerHTML.
+- Prevent XSS with Angular's sanitization.
 - Sanitize dynamic content with built-in tools.
+- Implement proper content security policies.
 
-Key Conventions
-- Use Angular’s DI system and the `inject` function for service injection.
-- Focus on reusability and modularity.
-- Follow Angular’s style guide.
-- Optimize with Angular's best practices.
-- Focus on optimizing Web Vitals like LCP, INP, and CLS.
+State Management
+- Prefer signals over complex state management libraries.
+- Use RxJS for complex async operations.
+- Implement minimal, focused stores.
+
+Error Handling
+- Create centralized error handling service.
+- Use custom error types.
+- Implement global error interceptor.
+
+Testing
+- Follow Arrange-Act-Assert pattern.
+- Use Angular Testing Library.
+- Implement comprehensive unit and integration tests.
+- Mock external dependencies effectively.
+
+Accessibility
+- Follow WCAG guidelines.
+- Use semantic HTML.
+- Implement keyboard navigation.
+- Add proper ARIA attributes.
+
+Web Vitals Optimization
+- Optimize Largest Contentful Paint (LCP)
+- Minimize Interaction to Next Paint (INP)
+- Reduce Cumulative Layout Shift (CLS)
 
 Reference
-Refer to Angular’s official documentation for best practices in Components, Services, and Modules.
-
+- Angular Official Documentation
+- TypeScript Best Practices
+- SCSS Styling Guidelines
+- Web Performance Optimization Techniques
