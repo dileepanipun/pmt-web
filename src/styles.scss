@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+ * Main stylesheet
+ * 
+ * This is the primary stylesheet that imports all other SCSS partials
+ * and defines global styles for the application.
+ */
+
+// Reset default browser styles and provide a consistent base
+@use "scss/utils/reset";
+
+// Global variables and settings
+@use "scss/base/variables" as vars;
+
+// Typography settings including font families, sizes, and text styles
+@use "scss/base/typography";
+
+// Base styles for the entire application
+@use "scss/base/base";

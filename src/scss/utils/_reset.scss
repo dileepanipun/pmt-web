@@ -1,0 +1,99 @@
+/**
+ * @file reset.scss
+ * @description Global style reset and normalization
+ * @version 1.0.0
+ * @author Dileepa Nipun
+ * @created 2024-11-20
+ * @copyright (c) 2024 Dileepa Nipun
+ * @license MIT
+ *
+ * This file provides a comprehensive CSS reset to normalize styles across browsers
+ * and establish a consistent baseline for the project. It removes default browser
+ * styling and implements modern CSS practices for better cross-browser consistency.
+ *
+ * @last-modified 2024-03-26
+ * @modified-by Dileepa Nipun
+ */
+
+/* Box sizing rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* Media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form element defaults */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Typography */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Modern text wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Root stacking context */
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Additional reset rules */
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove text decoration */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove button styling */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Remove default table spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
