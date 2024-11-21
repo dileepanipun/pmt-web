@@ -1,0 +1,42 @@
+// Variables
+$window-min-width: 300px;
+$window-max-width: 300px;
+$window-border-radius: 8px;
+$window-background: var(--background-color, #ffffff);
+$window-border-color: var(--border-color, #e0e0e0);
+$window-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+// Mixins
+@mixin window-base {
+  background: $window-background;
+  border: 1px solid $window-border-color;
+  border-radius: $window-border-radius;
+  box-shadow: $window-shadow;
+}
+
+@mixin centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// Component styles
+.window {
+  @include window-base;
+  min-width: $window-min-width;
+  max-width: $window-max-width;
+  margin: 1rem auto;
+  
+  &__content {
+    @include centered-content;
+    padding: 1.5rem;
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--text-color, #333333);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
