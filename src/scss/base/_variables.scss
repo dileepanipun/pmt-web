@@ -8,3 +8,24 @@ $primary: #ff8900;
 // Theme Colors
 $black: #000000;
 $white: #ffffff;
+
+// Background Colors
+$bg-dark: #080A0C;
+$text-primary: #ccd6f6;
+
+
+// ==========================================================================
+// Window Variables
+// ==========================================================================
+// window theme variables
+$window-min-width: 500px;
+$window-max-width: 800px;
+$window-border-radius: 8px;
+
+// Dark theme colors
+$window-background: $bg-dark;
+$window-border-color: #15181C;
+$window-text-color: $text-primary;
+$window-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+$window-header-background: #15181C;
+$window-control-hover: lighten($window-border-color, 10%);

@@ -1,5 +1,29 @@
 <div class="window">
+  <div class="window__header">
+    <div class="window__title">
+      Trading View ({{symbol}})
+    </div>
+    <div class="window__controls">
+      <button class="window__control-btn" (click)="onDuplicate()">
+        <lucide-angular [img]="CopyIcon" class="window__icon"></lucide-angular>
+      </button>
+      <button class="window__control-btn" (click)="toggleLock()">
+        <lucide-angular [img]="isLocked ? LockIcon : UnlockIcon" class="window__icon"></lucide-angular>
+      </button>
+      <button class="window__control-btn" (click)="onSettings()">
+        <lucide-angular [img]="SettingsIcon" class="window__icon"></lucide-angular>
+      </button>
+      <button class="window__control-btn window__control-btn--close" (click)="onClose()">
+        <lucide-angular [img]="CloseIcon" class="window__icon"></lucide-angular>
+      </button>
+    </div>
+  </div>
   <div class="window__content">
-    <p class="window__text">This is a test window component with fixed width</p>
+    <div class="window__text">
+      <!-- Add your trading view content here -->
+      <div class="window__chart-placeholder">
+        Chart Content Goes Here
+      </div>
+    </div>
   </div>
 </div>
