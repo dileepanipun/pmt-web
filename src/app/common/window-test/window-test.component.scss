@@ -46,13 +46,14 @@
   &__control-btn {
     background: none;
     border: none;
-    padding: 0.25rem;
+    padding: 0.375rem;
     color: $window-text-color;
     cursor: pointer;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: $window-control-icon-size;
 
     &:hover {
       background: $window-control-hover;
@@ -62,11 +63,12 @@
       background: #e81123;
       color: white;
     }
+  }
 
-    lucide-icon {
-      width: 16px;
-      height: 16px;
-    }
+  &__icon {
+    width: $window-control-icon-size;
+    height: $window-control-icon-size;
+    stroke-width: 2px;
   }
 
   &__content {

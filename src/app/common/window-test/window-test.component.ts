@@ -19,6 +19,8 @@ export class WindowTestComponent {
 
   isLocked = false;
 
+  readonly windowControlIconSize = 12;
+
   onDuplicate() {
     // Implement duplicate functionality
   }
