@@ -1,19 +1,19 @@
 <div class="window">
   <div class="window__header">
     <div class="window__title">
-      Trading View ({{symbol}})
+      Trading View ({{ symbol }})
     </div>
     <div class="window__controls">
-      <button class="window__control-btn" (click)="onDuplicate()">
+      <button (click)="onDuplicate()" class="window__control-btn">
         <lucide-angular [img]="CopyIcon" class="window__icon"></lucide-angular>
       </button>
-      <button class="window__control-btn" (click)="toggleLock()">
+      <button (click)="toggleLock()" class="window__control-btn">
         <lucide-angular [img]="isLocked ? LockIcon : UnlockIcon" class="window__icon"></lucide-angular>
       </button>
-      <button class="window__control-btn" (click)="onSettings()">
+      <button (click)="onSettings()" class="window__control-btn">
         <lucide-angular [img]="SettingsIcon" class="window__icon"></lucide-angular>
       </button>
-      <button class="window__control-btn window__control-btn--close" (click)="onClose()">
+      <button (click)="onClose()" class="window__control-btn window__control-btn--close">
         <lucide-angular [img]="CloseIcon" class="window__icon"></lucide-angular>
       </button>
     </div>
@@ -21,9 +21,11 @@
   <div class="window__content">
     <div class="window__text">
       <!-- Add your trading view content here -->
-      <div class="window__chart-placeholder">
-        Chart Content Goes Here
-      </div>
+      <!--      <div class="window__chart-placeholder">-->
+      <!--        Chart Content Goes Here-->
+      <!--      </div>-->
+
+      <app-stock-chart-test></app-stock-chart-test>
     </div>
   </div>
 </div>

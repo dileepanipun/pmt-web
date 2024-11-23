@@ -1,0 +1,38 @@
+<div class="stock-chart">
+  @if (isLoading()) {
+    <div class="stock-chart__loading">
+      Loading chart data...
+    </div>
+  }
+  
+  @if (error()) {
+    <div class="stock-chart__error">
+      {{ error() }}
+    </div>
+  }
+
+  @if (metadata()) {
+    <div class="stock-chart__metadata">
+      <div class="stock-chart__metadata-header">
+        <h2 class="stock-chart__symbol">{{ metadata()?.symbol }}</h2>
+        <span class="stock-chart__timezone">{{ metadata()?.timeZone }}</span>
+      </div>
+      <div class="stock-chart__metadata-details">
+        <div class="stock-chart__metadata-item">
+          <span class="stock-chart__metadata-label">Last Updated:</span>
+          <span class="stock-chart__metadata-value">{{ metadata()?.lastRefreshed }}</span>
+        </div>
+        <div class="stock-chart__metadata-item">
+          <span class="stock-chart__metadata-label">Interval:</span>
+          <span class="stock-chart__metadata-value">{{ metadata()?.interval }}</span>
+        </div>
+        <div class="stock-chart__metadata-item">
+          <span class="stock-chart__metadata-label">Data Type:</span>
+          <span class="stock-chart__metadata-value">{{ metadata()?.information }}</span>
+        </div>
+      </div>
+    </div>
+  }
+
+  <div #chartContainer class="chart-container"></div>
+</div>

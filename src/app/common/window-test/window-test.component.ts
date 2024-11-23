@@ -1,12 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { LucideAngularModule, X, Copy, Lock, Unlock, Settings } from 'lucide-angular';
+import {StockChartTestComponent} from '../stock-chart-test/stock-chart-test.component';
 
 @Component({
   selector: 'app-window-test',
   templateUrl: './window-test.component.html',
   styleUrls: ['./window-test.component.scss'],
   standalone: true,
-  imports: [LucideAngularModule],
+  imports: [LucideAngularModule, StockChartTestComponent],
 })
 export class WindowTestComponent {
   @Input() symbol: string = '';

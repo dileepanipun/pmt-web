@@ -1,6 +1,6 @@
 /**
  * Main stylesheet
- * 
+ *
  * This is the primary stylesheet that imports all other SCSS partials
  * and defines global styles for the application.
  */
@@ -9,7 +9,7 @@
 @use "scss/utils/reset";
 
 // Global variables and settings
-@use "scss/base/variables" as vars;
+@use "scss/base/variables" as *;
 
 // Typography settings including font families, sizes, and text styles
 @use "scss/base/typography";

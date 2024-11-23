@@ -1,6 +1,7 @@
 // ==========================================================================
 // Main Variables
 // ==========================================================================
+@use 'sass:color';
 
 // Brand Colors
 $primary: #ff8900;
@@ -28,5 +29,5 @@ $window-border-color: #15181C;
 $window-text-color: $text-primary;
 $window-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 $window-header-background: #15181C;
-$window-control-hover: lighten($window-border-color, 10%);
-$window-control-icon-size: 1rem; 
+$window-control-hover: color.adjust($window-border-color, $lightness: 10%);
+$window-control-icon-size: 1rem;
