@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { StockService } from '../../services/stock.service';
 import { CandlestickData, StockMetadata } from '../../interfaces/stock-data.interface';
 import { createChart, IChartApi } from 'lightweight-charts';
+import { LucideAngularModule,Clock } from 'lucide-angular';
+import { TimeAgoPipe } from '../../common/pipes/time-ago.pipe';
 
 @Component({
   selector: 'app-stock-chart-test',
@@ -12,7 +14,9 @@ import { createChart, IChartApi } from 'lightweight-charts';
   standalone: true,
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    LucideAngularModule,
+    TimeAgoPipe
   ]
 })
 export class StockChartTestComponent implements OnInit, OnDestroy {
@@ -28,6 +32,8 @@ export class StockChartTestComponent implements OnInit, OnDestroy {
   public metadata = signal<StockMetadata | null>(null);
 
   private resizeObserver: ResizeObserver | null = null;
+
+  ClockIcon = Clock;
 
   ngOnInit(): void {
     this.loadChartData();

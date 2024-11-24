@@ -13,22 +13,32 @@
 
   @if (metadata()) {
     <div class="stock-chart__metadata">
-      <div class="stock-chart__metadata-header">
-        <h2 class="stock-chart__symbol">{{ metadata()?.symbol }}</h2>
-        <span class="stock-chart__timezone">{{ metadata()?.timeZone }}</span>
-      </div>
-      <div class="stock-chart__metadata-details">
-        <div class="stock-chart__metadata-item">
-          <span class="stock-chart__metadata-label">Last Updated:</span>
-          <span class="stock-chart__metadata-value">{{ metadata()?.lastRefreshed }}</span>
-        </div>
-        <div class="stock-chart__metadata-item">
-          <span class="stock-chart__metadata-label">Interval:</span>
-          <span class="stock-chart__metadata-value">{{ metadata()?.interval }}</span>
-        </div>
-        <div class="stock-chart__metadata-item">
-          <span class="stock-chart__metadata-label">Data Type:</span>
-          <span class="stock-chart__metadata-value">{{ metadata()?.information }}</span>
+      <div class="stock-chart__content">
+        <div class="stock-chart__header">
+          <div class="stock-chart__title">
+            <div class="stock-chart__logo">
+              <img 
+                [src]="'https://s3-symbol-logo.tradingview.com/international-bus-mach--big.svg'"
+                [alt]="metadata()?.symbol + ' logo'"
+                class="stock-chart__logo-img"
+              />
+            </div>
+            <div class="stock-chart__info">
+              <div class="stock-chart__name-time">
+                <div class="stock-chart__name">
+                  <span class="stock-chart__symbol">{{ metadata()?.symbol }}</span>
+                  <span class="stock-chart__market">US/Eastern</span>
+                </div>
+                <div class="stock-chart__time">
+                  <lucide-angular [img]="ClockIcon" class="stock-chart__time-icon"></lucide-angular>
+                  <span class="stock-chart__time-text">
+                    {{ metadata()?.lastRefreshed | timeAgo }}
+                  </span>
+                </div>
+              </div>
+              <div class="stock-chart__description">{{ metadata()?.information }}</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

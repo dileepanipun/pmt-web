@@ -1,70 +1,97 @@
 .stock-chart {
-  &__container {
-    width: 800px;
-    height: 400px;
-    margin: 20px auto;
-    border-radius: 8px;
-    background-color: #1e1e1e;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  }
-
+  // Container styles
   &__loading,
   &__error {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 4px;
-    background-color: #2d2d2d;
-  }
-
-  &__error {
-    color: #cf6679;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
   }
 
   &__metadata {
+    margin-bottom: 1rem;
+    background-color: #ffffff0a;
+    margin: 2px;
+  }
+
+  &__content {
     padding: 1rem;
-    background-color: var(--surface-card);
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
   }
 
-  &__metadata-header {
+  &__header {
+    width: 100%;
+  }
+
+  &__title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  &__symbol {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  &__timezone {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-  }
-
-  &__metadata-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
   }
 
-  &__metadata-item {
+  &__logo {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 0.4rem;
+    overflow: hidden;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__name-time {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
   }
 
-  &__metadata-label {
-    font-size: 0.875rem;
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.25rem;
+  }
+
+  &__symbol {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  &__market {
     color: var(--text-secondary);
+    font-size: 0.875rem;
+    opacity: 0.5;
   }
 
-  &__metadata-value {
-    font-weight: 500;
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    opacity: 0.5;
+    font-style: italic;
+    margin-right: .8rem;
+
+    &-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    opacity: 0.5;
   }
 }
 
